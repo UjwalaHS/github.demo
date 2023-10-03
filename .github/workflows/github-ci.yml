@@ -1,0 +1,28 @@
+# gitlab-ci.yml
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+# The names and order of the pipeline stages
+stages:
+  - build
+  - test
+  - deploy
+
+build-job-example:
+  stage: build
+  script:
+    - echo "Building the 'Hello World' app"
+
+test-job-example:
+  stage: test
+  script:
+    - echo "Testing the 'Hello World' app"
+
+deploy-job-example:
+  stage: deploy
+  script:
+    - echo "Deploying the 'Hello World' app"
